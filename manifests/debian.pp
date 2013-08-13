@@ -1,17 +1,14 @@
-/*
-
-== Class: reprepro::debian
-
-Base class to install reprepro on debian
-
-*/
+# == Class: reprepro::debian
+#
+# Base class to install reprepro on debian
+#
 class reprepro::debian {
 
   include reprepro::params
   include concat::setup
 
   if ($::operatingsystem == 'Debian') and
-     (versioncmp($::operatingsystemrelease, 6) >= 0) {
+    (versioncmp($::operatingsystemrelease, 6) >= 0) {
     $has_reprepro = true
   }
   elsif ($::operatingsystem == 'Ubuntu') and
