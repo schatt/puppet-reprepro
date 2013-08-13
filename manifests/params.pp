@@ -1,10 +1,7 @@
-/*
-
-== Class: reprepro::params
-
-Global parameters
-
-*/
+# == Class: reprepro::params
+#
+# Global parameters
+#
 class reprepro::params {
 
   $basedir = $reprepro_basedir ? {
