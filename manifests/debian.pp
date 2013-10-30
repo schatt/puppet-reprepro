@@ -5,7 +5,6 @@
 class reprepro::debian {
 
   include reprepro::params
-  include concat::setup
 
   if ($::operatingsystem == 'Debian') and
     (versioncmp($::operatingsystemrelease, 6) >= 0) {
